@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
     styleUrls: ['components/about/about.component.css']
 })
 export class AboutComponent {
-    name: string = "About Us";
+    name: string = "About Us fdsfds ";
     param: string;
 
     constructor(private params: ActivatedRoute) {
