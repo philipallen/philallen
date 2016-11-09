@@ -9,13 +9,13 @@ import { Component } from '@angular/core';
 }
 `],
     template: `
-<h1>My Firstx {{name}} app</h1>
+<h1>This is the {{name}} I'll use for my CV</h1>
 <router-outlet></router-outlet>
 
 <a [routerLink]="['/']">Home</a> | <a [routerLink]="['/about/', { id: 2 }]">About</a>`,
 })
 export class AppComponent {
-    name: string = "Angular 2 on Express";
+    name: string = "website";
 
     constructor() {}
 }
