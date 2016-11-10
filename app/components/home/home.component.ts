@@ -10,6 +10,8 @@ import 'rxjs/add/operator/map';
 export class HomeComponent {
     name: string = "Home page";
     users: {};
+    // node: string = 'Node';
+    // data: { 'title': 'Node' };
 
     constructor(http: Http) {
         http.get("/users")

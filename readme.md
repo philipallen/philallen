@@ -29,6 +29,11 @@ npm run build:prod
 npm run prod
 ```
 
+## Deploy
+```bash
+git push origin heroku
+```
+
 ## If you are looking for Webpack version
 
 https://github.com/vladotesanovic/angular2-express-starter
