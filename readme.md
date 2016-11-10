@@ -31,7 +31,7 @@ npm run prod
 
 ## Deploy
 ```bash
-git push origin heroku
+git push heroku master
 ```
 
 ## If you are looking for Webpack version

@@ -5,8 +5,13 @@
 	border-radius: 50%;
 	width: 15px;
 	height: 15px; 
-	border: 1px solid red;
+	border: 1px solid black;
 }
 .bar.filled {
-	background-color: red;
+	background-color: green;
+}
+.title {
+	width: 110px;
+    display: inline-block;
+    text-align: right;
 }
