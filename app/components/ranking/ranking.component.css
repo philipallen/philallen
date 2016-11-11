@@ -1,4 +1,4 @@
-.bar {
+.ranking {
 	display: inline-block;
 	position: relative;
     top: 3px;
@@ -7,11 +7,11 @@
 	height: 15px; 
 	border: 1px solid black;
 }
-.bar.filled {
+.ranking.filled {
 	background-color: green;
 }
-.title {
-	width: 110px;
-    display: inline-block;
-    text-align: right;
+.ranking-container {
+	display: inline-block;
+    margin: 0 15px 10px 0;
+    width: 105px;
 }

@@ -1,8 +1,23 @@
 .company-logo {
 	display: inline;
-	height: 50px;
+	height: 40px;
+	margin-right: 10px;
+	vertical-align: middle;
 }
 
-.company-name {
+.company-logo.make-bigger {
+	height: 70px;
+}
+
+/*.company-name {
 	display: inline;
+	vertical-align: middle;
+	position: relative;
+    bottom: 3px;
+}*/
+
+.company-container {
+	margin: 15px 0px;
+	background-color: #E8E8E8;
+    padding: 15px;
 }

@@ -1,8 +1,8 @@
-<div>
-	<span class="title">{{title}}</span>
-	<div [ngClass]="{'filled': rating > 0 }" class="bar"></div>
-	<div [ngClass]="{'filled': rating > 1 }" class="bar"></div>
-	<div [ngClass]="{'filled': rating > 2 }" class="bar"></div>
-	<div [ngClass]="{'filled': rating > 3 }" class="bar"></div>
-	<div [ngClass]="{'filled': rating > 4 }" class="bar"></div>
+<div class="ranking-container">
+	<div>{{title}}</div>
+	<div [ngClass]="{'filled': rating > 0 }" class="ranking"></div>
+	<div [ngClass]="{'filled': rating > 1 }" class="ranking"></div>
+	<div [ngClass]="{'filled': rating > 2 }" class="ranking"></div>
+	<div [ngClass]="{'filled': rating > 3 }" class="ranking"></div>
+	<div [ngClass]="{'filled': rating > 4 }" class="ranking"></div>
 </div>	

@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 	}`]
 })
 export class AppComponent {
-    name: string = "Phil Allen";
+    name: string = "P";
 
     constructor() {}
 }
