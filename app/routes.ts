@@ -10,7 +10,7 @@ export const routes: Route[] = [
     { path: 'about', component: AboutComponent,
 	    children: [
 	      { path: '', redirectTo: 'overview', pathMatch: 'full' },
-	      { path: 'overview', component: OverviewComponent }
+	      { path: 'overview', component: OverviewComponent },
 	      { path: 'another', component: AnotherComponent }
 	    ] 
 	}
