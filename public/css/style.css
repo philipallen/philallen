@@ -19,3 +19,9 @@ body {
 a {
   color: #00B7FF;
 }
+
+/*Not sure if this is good - prettify doesn't seem to work properly */
+pre.prettyprint {
+	border: none !important;
+	padding: 0 !important;
+}
