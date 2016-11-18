@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, JsonpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
-import { AboutComponent } from "./components/about/about.component";
+import { BlogComponent } from "./components/blog/blog.component";
 import { routing } from "./routes";
 import { HomeComponent } from "./components/home/home.component";
 import { RankingComponent } from "./components/ranking/ranking.component";
-import { OverviewComponent } from './components/about/overview.component';
-import { AnotherComponent } from './components/about/another.component';
+import { Blog_AnglarMemory } from './components/blog/blogs/blog_angular-memory';
+import { AnotherComponent } from './components/blog/blogs/another.component';
 
 @NgModule({
     imports: [
@@ -19,10 +19,10 @@ import { AnotherComponent } from './components/about/another.component';
     ],
     declarations: [
         AppComponent,
-        AboutComponent,
+        BlogComponent,
         HomeComponent,
         RankingComponent,
-        OverviewComponent,
+        Blog_AnglarMemory,
         AnotherComponent
     ],
     bootstrap: [ AppComponent ]

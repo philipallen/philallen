@@ -1,0 +1,18 @@
+h1 {
+	color: white;
+	background: darkgray;
+	padding: 20px;
+}
+.blog-navigation {
+	float: left;
+    width: 140px;
+    min-height: 50px;
+    margin-left: 10px;
+    border: 2px dashed #00f
+}
+
+.blog-content {
+	overflow: hidden;
+    min-height: 500px;
+    border: 2px dashed #f0f
+}

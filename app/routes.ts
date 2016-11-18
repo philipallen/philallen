@@ -1,16 +1,16 @@
 import { Route, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
-import { OverviewComponent } from './components/about/overview.component';
-import { AnotherComponent } from './components/about/another.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { Blog_AnglarMemory } from './components/blog/blogs/blog_angular-memory';
+import { AnotherComponent } from './components/blog/blogs/another.component';
 
 export const routes: Route[] = [
     { path: '', pathMatch: 'full', component: HomeComponent },
-    { path: 'about', component: AboutComponent,
+    { path: 'blog', component: BlogComponent,
 	    children: [
-	      { path: '', redirectTo: 'overview', pathMatch: 'full' },
-	      { path: 'overview', component: OverviewComponent },
+	      { path: '', redirectTo: 'angular-memory-leaks', pathMatch: 'full' },
+	      { path: 'angular-memory-leaks', component: Blog_AnglarMemory },
 	      { path: 'another', component: AnotherComponent }
 	    ] 
 	}

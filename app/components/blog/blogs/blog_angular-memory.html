@@ -1,0 +1,71 @@
+<h2>Angular Memory Leaks</h2>
+<h3>Observing leaks</h3>
+<h5>How to observe memory consumption (using Chrome)</h5>
+<ul>
+	<li>Shift + Esc to see a list of Chrome processes. (Or right click on Chrome header, Task Manager)</li>
+	<li>Add Javascript Memory to the columns</li>
+	<li>Use your app and observe the Javascript Memory column. Obviously if it increases and never decreases, you have a memory issue</li>
+</ul>
+<h5>How to manually run the garbage collector</h5>
+<ul>
+	<li>Open the Timeline tab in the Dev Tools</li>
+	<li>Click on the 'bin' icon. If the Javascript Memory doesn't decrease by much then that's an indication you have a memory leak</li>
+</ul>
+<h5>To see the contents of your memory</h5>
+<ul>
+	<li>Open the Profiles tab in the Dev Tools</li>
+	<li>Take a Heap Snapshot</li>
+	<li>The list displayed are the <b>uncollectable objects</b></li>
+</ul>
+
+
+<h3>Fixing leaks</h3>
+<ul>
+	<li>Clean up all listeners when the scope is destroyed:</li>
+	<p><small>e.g. 1</small></p>
+	<pre class="prettyprint"><![CDATA[
+var listenerCleanFn = $rootScope.$on( ... );	
+$scope.$on('$destroy', function() {
+	listenerCleanFn();
+});	]]>
+	</pre>
+	<p>When using $rootScope for listeners, if you don't remove the listener properly, all referencing closures, scopes etc. continue to exist.</p>
+	<p><small>e.g. 2</small></p>
+	<pre class="prettyprint"><![CDATA[
+$(document).on('click', ... );
+$scope.$on('$destroy', function() {
+	listenerCleanFn();
+});	]]>
+	</pre>
+	<li>Clean up all timeouts and intervals:</li>
+	<p><small>e.g. 1</small></p>
+	<pre class="prettyprint"><![CDATA[
+var timeout = setTimeout(function(){ ... );
+$scope.$on('$destroy', function() {
+	clearTimeout(timeout);
+});	]]>
+	</pre>
+	<p><small>e.g. 2</small></p>
+	<pre class="prettyprint"><![CDATA[
+var interval = setInterval(function(){ ... );
+$scope.$on('$destroy', function() {
+	clearInterval(interval);
+});	]]>
+	</pre>
+	<li>Clean up plugins:</li>
+	<pre class="prettyprint"><![CDATA[
+SomePlugin.init();
+$scope.$on('$destroy', function() {
+	SomePlugin.nuke();
+});	]]>
+	</pre>
+	<li>Remove all console logs!</li> 
+	<p>When you console.log, the browser allows you to traverse the scope of the thing you logged, hence its objects won't be garbage collected.</p>
+	<li>Clean up your own scopes that you create:</li>
+	<pre class="prettyprint"><![CDATA[
+myScope = $scope.$new();
+//later...
+myScope.destroy();]]>
+	</pre>
+</ul>
+
