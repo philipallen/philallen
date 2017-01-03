@@ -22,6 +22,11 @@ npm start
 # Applciation url: http://localhost:3000
 ```
 
+##Pull latest
+```bash
+git pull heroku master
+```
+
 ## Run in production mod
 ```bash
 npm run build:prod
