@@ -24,4 +24,5 @@ a {
 pre.prettyprint {
 	border: none !important;
 	padding: 0 !important;
+  overflow: scroll;
 }
