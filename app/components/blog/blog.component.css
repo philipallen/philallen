@@ -3,16 +3,45 @@ h1 {
 	background: darkgray;
 	padding: 20px;
 }
+
+.blog-container {
+    position: relative;
+}
+
 .blog-navigation {
 	float: left;
     width: 140px;
     min-height: 50px;
-    margin-left: 10px;
     border: 2px dashed #00f
+}
+
+.blog-navigation-toggler {
+    margin: 10px 0;
 }
 
 .blog-content {
 	overflow: hidden;
     min-height: 500px;
     border: 2px dashed #f0f
+}
+
+.blog-navigation-toggler {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .blog-navigation {
+        display: none;
+    }
+
+    .blog-navigation.show-menu {
+        display: block;
+        position: absolute;
+        background-color: white;
+        top: 21px;
+    }
+
+    .blog-navigation-toggler {
+        display: block;
+    }
 }

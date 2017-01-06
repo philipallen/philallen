@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
     styleUrls: ['components/blog/blog.component.css']
 })
 export class BlogComponent {
-    constructor() {}
+    constructor() {
+    	public menu = false;
+    	toggleMenu(): void {
+    		this.menu = this.menu ? false : true;
+		}
+    }
 }
