@@ -1,6 +1,7 @@
 <div class="blog-container">
 	<nav [ngClass]="{'show-menu': menu}" (click)="toggleMenu()" class="blog-navigation">
 	  <p [routerLink]="['angular-memory-leaks']">Angular Memory Leaks</p>
+	  <p [routerLink]="['frontend-essentials']">Frontend Developer Essentials</p>
 	  <p [routerLink]="['another']">Another</p>
 	</nav>
 	<button (click)="toggleMenu()" class="blog-navigation-toggler">More</button>

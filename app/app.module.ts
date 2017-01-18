@@ -4,10 +4,12 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
 import { BlogComponent } from "./components/blog/blog.component";
+import { ContactComponent } from "./components/contact/contact.component";
 import { routing } from "./routes";
 import { HomeComponent } from "./components/home/home.component";
 import { RankingComponent } from "./components/ranking/ranking.component";
 import { Blog_AnglarMemory } from './components/blog/blogs/blog_angular-memory';
+import { Blog_FrontendEssentials } from './components/blog/blogs/blog_frontend-essentials';
 import { AnotherComponent } from './components/blog/blogs/another.component';
 
 @NgModule({
@@ -20,9 +22,11 @@ import { AnotherComponent } from './components/blog/blogs/another.component';
     declarations: [
         AppComponent,
         BlogComponent,
+        ContactComponent,
         HomeComponent,
         RankingComponent,
         Blog_AnglarMemory,
+        Blog_FrontendEssentials,
         AnotherComponent
     ],
     bootstrap: [ AppComponent ]
