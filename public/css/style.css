@@ -1,18 +1,33 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
 
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
 @media screen and (max-width: 480px) {
-    body {
+    .content {
         padding: 10px;
     }
 }
 
 @media screen and (min-width: 481px) {
-    body {
+    .content {
   		padding: 30px;
     }
 }
 
 body {
+  margin: 0;
   font-family: "Segoe UI","Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif;
 }
 
@@ -25,4 +40,14 @@ pre.prettyprint {
 	border: none !important;
 	padding: 0 !important;
   overflow: auto;
+}
+
+footer {
+  font-size: 12px;
+  text-align: center;
+  border-top: 1px dashed grey;
+}
+
+.footer-icon { 
+  height: 25px; 
 }
