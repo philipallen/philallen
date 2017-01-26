@@ -1,8 +1,10 @@
 <h1>{{name}}</h1>
-<a [routerLink]="['/']">Home</a> |
-<a [routerLink]="['blog']">Blog</a> |
-<a [routerLink]="['playground']">Playground</a> |
-<a [routerLink]="['contact']">Contact</a>
+<div class="menu">
+	<a [routerLink]="['/']">Home</a> |
+	<a [routerLink]="['blog']">Blog</a> |
+	<a [routerLink]="['playground']">Playground</a> |
+	<a [routerLink]="['contact']">Contact</a>
+</div>
 
 <router-outlet></router-outlet>
 

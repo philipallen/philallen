@@ -27,7 +27,8 @@ body {
 }
 
 body {
-  margin: 0;
+  max-width: 1000px;
+  margin: 0 auto;
   font-family: "Segoe UI","Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif;
 }
 
