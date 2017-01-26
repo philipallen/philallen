@@ -1,0 +1,31 @@
+.outer {
+	padding: 15px 0 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    background: linear-gradient(#0072ff,#0072ff,#00b4ff);
+}
+
+.circle {
+	display: block;
+	width: 90px;
+	height: 90px;
+	border-radius: 45px;
+	font-size: 20px;
+	color: #fff;
+	line-height: 90px;
+	text-align: center;
+	background: #000;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.middle {
+	margin: 0 auto;
+}

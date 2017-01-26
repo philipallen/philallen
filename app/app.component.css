@@ -1,0 +1,13 @@
+h1 {
+	color: white;
+	background: darkgray;
+	padding: 20px;
+}
+
+footer {
+	font-size: 12px;
+}
+
+.footer-icon { 
+	height: 25px; 
+}
