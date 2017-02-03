@@ -1,31 +1,51 @@
 .outer {
-	padding: 15px 0 20px;
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
-    background: linear-gradient(#0072ff,#0072ff,#00b4ff);
+	max-width: 800px;
+	font-size: 0;
+    background: linear-gradient(#195797,#165391);
+}
+
+.square {
+	position: relative;
+  	width: 28%;
+  	padding: 7px;
+}
+
+.square:after {
+  	content: "";
+  	display: block;
 }
 
 .circle {
-	display: block;
-	width: 90px;
-	height: 90px;
-	border-radius: 45px;
-	font-size: 20px;
-	color: #fff;
-	line-height: 90px;
-	text-align: center;
-	background: #000;
+	cursor: pointer;
+	width: 100%;
+	border-radius: 50%;
+	background: #009aff;
 }
 
-.left {
-	float: left;
+.circle:after {
+	content: "";
+  	display: block;
+  	padding-bottom: 100%;
 }
 
 .right {
 	float: right;
 }
 
+.left {
+	float: left;
+}
+
 .middle {
-	margin: 0 auto;
+  	margin: 0 auto;
+}
+
+.circle-text {
+	position: absolute;
+	left: 50%;
+    top: 50%;
+	transform: translate(-50%, -50%);
+	color: #cfe5fb;
+	font-weight: 700;
+	font-size: 4vw;
 }
