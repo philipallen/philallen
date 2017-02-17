@@ -1,9 +1,17 @@
-<h1>{{name}}</h1>
-<div class="menu">
-	<a [routerLink]="['/']">Home</a> |
-	<a [routerLink]="['blog']">Blog</a> |
-	<a [routerLink]="['playground']">Playground</a> |
-	<a [routerLink]="['contact']">Contact</a>
+<div class="header">
+	<div class="col col-50">
+		<h1>{{name}}</h1>
+	</div>
+	<div class="col col-50">	
+		<div class="menu">
+			<ul class="menu-main">
+				<li class="menu-item"><a [routerLink]="['/']">Home</a></li>
+				<li class="menu-item"><a [routerLink]="['blog']">Blog</a></li>
+				<li class="menu-item"><a [routerLink]="['playground']">Playground</a></li>
+				<li class="menu-item"><a [routerLink]="['contact']">Contact</a></li>
+			</ul>
+		</div>
+	</div>	
 </div>
 
 <router-outlet></router-outlet>

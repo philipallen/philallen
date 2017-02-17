@@ -1,11 +1,56 @@
+.header {
+	font-family: 'Graphik Web',sans-serif;
+	margin-top: 36px;
+    margin-bottom: 24px;
+    overflow: auto;
+
+    /*width: 100%;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    z-index: 9999;*/
+}
+
 h1 {
-	color: white;
-	background: darkgray;
-	padding: 30px;
-	background: url('dublinPhoto.jpg') 52% 2% no-repeat;
+	color: #222;
 	margin: 0;
 }
 
 .menu {
 	margin: 10px 0;
+}
+
+.col {
+	float: left;
+}
+
+.col-50 {
+	width: 50%;
+}
+
+.menu-main {
+    margin-top: 14px;
+    overflow: hidden;
+    list-style: none;
+}
+
+.menu-item {
+	float: left;
+	font-size: 15px;
+    line-height: 20px;
+    font-family: 'Graphik Web',sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    max-width: 115px;
+}
+
+a {
+    margin-right: 30px;
+    display: block;
+    color: #bbb;
+    text-decoration: none;
+}
+
+a:hover {
+	color: #222;
 }
