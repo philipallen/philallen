@@ -5,35 +5,61 @@ html {
 }
 
 body {
+    color: #a1a1a1;
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    font-family: 'Graphik Web',sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  /*font-family: "Segoe UI","Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif;*/
 }
 
 .content {
+    margin-top: 115px;
     flex: 1;
 }
 
-@media screen and (max-width: 480px) {
-    .content {
-        padding: 10px;
-    }
+@media screen and (max-width: 540px) {
+  .content {
+    margin-top: 0px;
+  }
 }
 
-@media screen and (min-width: 481px) {
-    .content {
-  		padding: 30px;
-    }
+
+h1 {
+    margin: 0;
 }
 
-body {
-  max-width: 1000px;
-  margin: 0 auto;
-  font-family: "Segoe UI","Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif;
+h2 {
+  color: #222;
+  /*font-size: 22px;
+  line-height: 18px;*/
+  font-weight: normal;
+  font-style: normal;
+}
+
+h4 {
+  color: #222;
+  font-size: 22px;
+  line-height: 18px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+p {
+  font-size: 15px;
 }
 
 a {
-  color: #00B7FF;
+    margin-right: 30px;
+    display: block;
+    color: #bbb;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #222;
 }
 
 /*Not sure if this is good - prettify doesn't seem to work properly */

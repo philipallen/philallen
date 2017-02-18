@@ -1,18 +1,17 @@
 <div class="header">
-	<div class="col col-50">
-		<h1>{{name}}</h1>
+	<div class="pull-left header-title">
+		<h1 [routerLink]="['/']">{{name}}</h1>
 	</div>
-	<div class="col col-50">	
-		<div class="menu">
-			<ul class="menu-main">
-				<li class="menu-item"><a [routerLink]="['/']">Home</a></li>
-				<li class="menu-item"><a [routerLink]="['blog']">Blog</a></li>
-				<li class="menu-item"><a [routerLink]="['playground']">Playground</a></li>
-				<li class="menu-item"><a [routerLink]="['contact']">Contact</a></li>
-			</ul>
-		</div>
+	<div class="menu pull-right">	
+		<ul class="menu-main">
+			<li class="menu-item"><a [routerLink]="['/']">Home</a></li>
+			<li class="menu-item"><a [routerLink]="['blog']">Blog</a></li>
+			<li class="menu-item"><a [routerLink]="['playground']">Playground</a></li>
+			<li class="menu-item"><a [routerLink]="['contact']">Contact</a></li>
+		</ul>
 	</div>	
 </div>
 
-<router-outlet></router-outlet>
-
+<div class="content">
+	<router-outlet></router-outlet>
+</div>

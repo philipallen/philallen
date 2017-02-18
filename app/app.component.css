@@ -1,41 +1,57 @@
 .header {
-	font-family: 'Graphik Web',sans-serif;
-	margin-top: 36px;
-    margin-bottom: 24px;
+    padding: 36px 0 24px;
     overflow: auto;
-
-    /*width: 100%;
+    width: 100%;
     background: #fff;
     position: fixed;
     left: 0;
-    z-index: 9999;*/
+    z-index: 9999;
 }
 
-h1 {
-	color: #222;
-	margin: 0;
+@media screen and (max-width: 540px) {
+	.header {
+		position: static;
+		padding-bottom: 0;
+	}
 }
 
-.menu {
-	margin: 10px 0;
+.header-title {
+  	color: #222;
+	min-width: 150px;
+	margin: 0 20px;
+	cursor: pointer;
 }
 
-.col {
+.pull-left {
 	float: left;
 }
 
-.col-50 {
-	width: 50%;
+.pull-right {
+	float: right;
+}
+
+.menu {
+	margin-left: 20px;
+}
+
+@media screen and (max-width: 540px) {
+	.menu {
+		float: none;
+		display: inline-block;
+		margin-top: 10px;
+	}
 }
 
 .menu-main {
+	white-space: nowrap;
+    padding: 0;
     margin-top: 14px;
     overflow: hidden;
     list-style: none;
 }
 
 .menu-item {
-	float: left;
+	display: inline-block;
 	font-size: 15px;
     line-height: 20px;
     font-family: 'Graphik Web',sans-serif;
@@ -44,13 +60,3 @@ h1 {
     max-width: 115px;
 }
 
-a {
-    margin-right: 30px;
-    display: block;
-    color: #bbb;
-    text-decoration: none;
-}
-
-a:hover {
-	color: #222;
-}
