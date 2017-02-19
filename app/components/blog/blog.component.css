@@ -22,7 +22,10 @@ h1 {
 .blog-content {
 	overflow: hidden;
     min-height: 500px;
-    border: 2px dashed #f0f
+
+    /*same as the home component content: */
+    padding: 25px;
+    background-color: #f8f8f8;
 }
 
 .blog-navigation-toggler {

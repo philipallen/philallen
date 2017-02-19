@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Graphik Web',sans-serif;
-  max-width: 1000px;
+  /*max-width: 1000px;*/
   margin: 0 auto;
   /*font-family: "Segoe UI","Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif;*/
 }
@@ -47,13 +47,20 @@ h4 {
   font-style: normal;
 }
 
+h5 {
+  color: #222;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: normal;
+  font-style: normal;
+  margin: 15px 0;
+}
+
 p {
   font-size: 15px;
 }
 
 a {
-    margin-right: 30px;
-    display: block;
     color: #bbb;
     text-decoration: none;
 }
@@ -71,10 +78,38 @@ pre.prettyprint {
 
 footer {
   font-size: 12px;
+  padding: 10px 0;
+  border-top: 1px solid #dedee1;
   text-align: center;
-  border-top: 1px dashed grey;
+}
+
+.app-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-icon { 
-  height: 25px; 
+  height: 15px;
+  margin: 0 4px; 
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.footer-icon.bigger {
+  height: 25px;
+  margin: 0;
+}
+
+.footer-icon:hover {
+    -webkit-filter: initial;
+    filter: initial;
+}
+
+.divider {
+    margin: 25px 0;
+    padding: 0;
+    border-top: 1px solid #dedee1;
+    height: 0;
+    width: 100%;
 }
