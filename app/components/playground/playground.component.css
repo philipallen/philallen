@@ -1,7 +1,12 @@
+.playground-content {
+	padding: 25px;
+	background-color: #f8f8f8;
+}
+
 .outer {
 	max-width: 800px;
 	font-size: 0;
-    background: linear-gradient(#195797,#165391);
+    /*background: linear-gradient(#195797,#165391);*/
 }
 
 .square {
@@ -19,7 +24,8 @@
 	cursor: pointer;
 	width: 100%;
 	border-radius: 50%;
-	background: #009aff;
+	border: 1px solid #CC6666;
+	/*background: #009aff;*/
 }
 
 .circle:after {
@@ -45,7 +51,7 @@
 	left: 50%;
     top: 50%;
 	transform: translate(-50%, -50%);
-	color: #cfe5fb;
+	color: #CC6666;
 	font-weight: 700;
 	font-size: 4vw;
 }

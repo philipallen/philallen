@@ -1,10 +1,10 @@
 <div class="blog-container">
 	<nav [ngClass]="{'show-menu': menu}" (click)="toggleMenu()" class="blog-navigation">
-	  <p [routerLink]="['angular-memory-leaks']">Angular Memory Leaks</p>
-	  <p [routerLink]="['frontend-essentials']">Frontend Developer Essentials</p>
-	  <p [routerLink]="['another']">Another</p>
+	  <p><a [routerLink]="['angular-memory-leaks']" routerLinkActive="active-menu-item">Angular Memory Leaks</a></p>
+	  <p><a [routerLink]="['frontend-essentials']" routerLinkActive="active-menu-item">Frontend Developer Essentials</a></p>
+	  <p><a [routerLink]="['another']" routerLinkActive="active-menu-item">Another</a></p>
 	</nav>
-	<button (click)="toggleMenu()" class="blog-navigation-toggler">More</button>
+	<button (click)="toggleMenu()" class="blog-navigation-toggler">Blog Menu</button>
 	<div class="blog-content">   
 		<router-outlet></router-outlet>
 	</div>	

@@ -9,10 +9,11 @@ h1 {
 }
 
 .blog-navigation {
+    cursor: pointer;
 	float: left;
     width: 140px;
     min-height: 50px;
-    border: 2px dashed #00f
+    padding: 0 25px;
 }
 
 .blog-navigation-toggler {
@@ -41,10 +42,18 @@ h1 {
         display: block;
         position: absolute;
         background-color: white;
-        top: 21px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        top: 0;
     }
 
     .blog-navigation-toggler {
+        background: none;
+        border: 1px solid #CC6666;
+        color: #bbb;
+        margin: 10px auto;
         display: block;
     }
 }
