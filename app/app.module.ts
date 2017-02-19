@@ -4,6 +4,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
 import { BlogComponent } from "./components/blog/blog.component";
+import { WorkComponent } from "./components/work/work.component";
 import { PlaygroundComponent } from "./components/playground/playground.component";
 import { routing } from "./routes";
 import { HomeComponent } from "./components/home/home.component";
@@ -22,6 +23,7 @@ import { AnotherComponent } from './components/blog/blogs/another.component';
     declarations: [
         AppComponent,
         BlogComponent,
+        WorkComponent,
         PlaygroundComponent,
         HomeComponent,
         RankingComponent,

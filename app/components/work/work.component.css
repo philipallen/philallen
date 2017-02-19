@@ -1,0 +1,22 @@
+.work-content {
+	padding: 25px;
+	background-color: #f8f8f8;
+}
+
+.company-logo {
+	display: inline;
+	height: 40px;
+	margin-right: 10px;
+	vertical-align: middle;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.company-logo:hover {
+    -webkit-filter: initial;
+    filter: initial;
+}
+
+.company-logo.make-bigger {
+	height: 70px;
+}
