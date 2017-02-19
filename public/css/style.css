@@ -20,7 +20,7 @@ body {
     flex: 1;
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 454px) {
   .content {
     margin-top: 0px;
   }
