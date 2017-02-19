@@ -2,7 +2,6 @@ import { Route, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
 import { BlogComponent } from './components/blog/blog.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { PlaygroundComponent } from './components/playground/playground.component';
 import { Blog_AnglarMemory } from './components/blog/blogs/blog_angular-memory';
 import { Blog_FrontendEssentials } from './components/blog/blogs/blog_frontend-essentials';
@@ -18,8 +17,7 @@ export const routes: Route[] = [
 	      { path: 'another', component: AnotherComponent }
 	    ] 
 	},
-    { path: 'playground', component: PlaygroundComponent },
-    { path: 'contact', component: ContactComponent }
+    { path: 'playground', component: PlaygroundComponent }
 ];
 
 export const routing = RouterModule.forRoot(routes, { useHash: true });

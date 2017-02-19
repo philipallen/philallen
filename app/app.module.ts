@@ -5,7 +5,6 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { AppComponent }  from './app.component';
 import { BlogComponent } from "./components/blog/blog.component";
 import { PlaygroundComponent } from "./components/playground/playground.component";
-import { ContactComponent } from "./components/contact/contact.component";
 import { routing } from "./routes";
 import { HomeComponent } from "./components/home/home.component";
 import { RankingComponent } from "./components/ranking/ranking.component";
@@ -23,7 +22,6 @@ import { AnotherComponent } from './components/blog/blogs/another.component';
     declarations: [
         AppComponent,
         BlogComponent,
-        ContactComponent,
         PlaygroundComponent,
         HomeComponent,
         RankingComponent,
