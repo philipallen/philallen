@@ -1,0 +1,114 @@
+.table-row {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-wrap: no-wrap;
+  -webkit-flex-wrap: no-wrap;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.wrapper {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+}
+.column {
+  flex-grow: 0;
+  -webkit-flex-grow: 0;
+  flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  vertical-align: top;
+}
+.title {
+  width: 220px;
+  font-weight: bold;
+  color: #337AB5;
+}
+.comment {
+  width: 120px;
+}
+.title,
+.comment {
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  overflow: hidden;
+  /*white-space: nowrap;
+  text-overflow: ellipsis;*/
+  padding-right: 4px;
+}
+/* growable wrappers */
+.title-comment,
+.title-comment-module-reporter,
+.attributes {
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+}
+/*
+ * Media queries: optimize for different screen widths.
+ */
+/*
+ * Media breaks.
+ */
+@media all and (max-width: 1236px) {
+  .title-comment {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    width: 220px;
+  }
+  .title-comment div {
+    flex-grow: 0;
+    -webkit-flex-grow: 0;
+  }
+  .title-comment > div {
+    width: 100%;
+  }
+}
+@media all and (max-width: 956px) {
+  .title-comment-module-reporter {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    width: 220px;
+  }
+  .title-comment-module-reporter div {
+    flex-grow: 0;
+    -webkit-flex-grow: 0;
+  }
+  .title-comment-module-reporter > div {
+    width: 100%;
+  }
+}
+@media all and (max-width: 528px) {
+  .table-row {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .attributes {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    width: 220px;
+  }
+  .attributes div {
+    flex-grow: 0;
+    -webkit-flex-grow: 0;
+  }
+  .attributes > div {
+    width: 100%;
+  }
+}
+/*
+ * General good-look styles
+ */
+.table-row {
+  border-bottom: 1px solid #e0e0e0;
+  border-collapse: collapse;
+  padding-top: 2px;
+}
+.table-row.header {
+  background-color: #FFEEDB;
+  font-weight: bold;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}

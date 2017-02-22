@@ -11,7 +11,7 @@ import { HomeComponent } from "./components/home/home.component";
 import { RankingComponent } from "./components/ranking/ranking.component";
 import { Blog_AnglarMemory } from './components/blog/blogs/blog_angular-memory';
 import { Blog_FrontendEssentials } from './components/blog/blogs/blog_frontend-essentials';
-import { AnotherComponent } from './components/blog/blogs/another.component';
+import { Blog_JavascriptInIE } from './components/blog/blogs/blog_javascript-in-ie.component';
 
 @NgModule({
     imports: [
@@ -29,7 +29,7 @@ import { AnotherComponent } from './components/blog/blogs/another.component';
         RankingComponent,
         Blog_AnglarMemory,
         Blog_FrontendEssentials,
-        AnotherComponent
+        Blog_JavascriptInIE
     ],
     bootstrap: [ AppComponent ]
 })

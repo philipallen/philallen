@@ -1,0 +1,223 @@
+<h2>JavaScript in Internet Explorer</h2>
+<h4>Observing leaks</h4>
+<h5>How to observe memory consumption (using Chrome)</h5>
+
+<div class="container-fluid">
+
+  <div class="table-row header">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-module-reporter">
+        <div class="wrapper title-comment">
+          <div class="column title">Trident</div>
+          <div class="column comment">Webkit</div>
+          <div class="column comment">Notes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-module-reporter">
+        <div class="wrapper title-comment">
+          <div class="column title">elem.attachEvent()</div>
+          <div class="column comment">elem.addEventListener()</div>
+          <div class="column comment"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-module-reporter">
+        <div class="wrapper title-comment">
+          <div class="column title">elem.all.tags("input");</div>
+          <div class="column comment">elem.getElementsByTagName('input');</div>
+          <div class="column comment"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-module-reporter">
+        <div class="wrapper title-comment">
+          <div class="column title">elem.runtimeStyle</div>
+          <div class="column comment">elem.style</div>
+          <div class="column comment"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-module-reporter">
+        <div class="wrapper title-comment">
+          <div class="column title">elem.currentStyle</div>
+          <div class="column comment">elem.style</div>
+          <div class="column comment"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-module-reporter">
+        <div class="wrapper title-comment">
+          <div class="column title">elem.pixelHeight</div>
+          <div class="column comment">elem.height</div>
+          <div class="column comment">Similar idea for 'width', 'top', 'bottom', 'left', 'right'</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-module-reporter">
+        <div class="wrapper title-comment">
+          <div class="column title">elem.document.body</div>
+          <div class="column comment">elem.ownerDocument.body</div>
+          <div class="column comment"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-module-reporter">
+        <div class="wrapper title-comment">
+          <div class="column title">elem.selectSingleNode("name")</div>
+          <div class="column comment">elem.getElementsByTagName("name")[0]</div>
+          <div class="column comment">Returns a single element.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-module-reporter">
+        <div class="wrapper title-comment">
+          <div class="column title">elem.selectNodes("name")</div>
+          <div class="column comment">elem.getElementsByTagName("name")</div>
+          <div class="column comment">Returns an array.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-module-reporter">
+        <div class="wrapper title-comment">
+          <div class="column title">elem.selectNodes("*")</div>
+          <div class="column comment">elem.children</div>
+          <div class="column comment">Returns an array.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-module-reporter">
+        <div class="wrapper title-comment">
+          <div class="column title">elem.text</div>
+          <div class="column comment">elem.textContent</div>
+          <div class="column comment"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-module-reporter">
+        <div class="wrapper title-comment">
+          <div class="column title">elem.cloneNode()</div>
+          <div class="column comment">jQuery's elem.clone(true, true)</div>
+          <div class="column comment">jQuery not the perfect solution, but it does a deep copy, including events. Would need to change events to jQuery too though.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-module-reporter">
+        <div class="wrapper title-comment">
+          <div class="column title">table.cells[y]</div>
+          <div class="column comment">table.rows[x].cells[y]</div>
+          <div class="column comment">Not an exact replacement, as you need to know the row. A custom method would have to be written.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-module-reporter">
+        <div class="wrapper title-comment">
+          <div class="column title">ActiveXObject</div>
+          <div class="column comment">File write API</div>
+          <div class="column comment">Security issues are making this harder to achieve.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-module-reporter">
+        <div class="wrapper title-comment">
+          <div class="column title">Left click: event.button === 1 --> returns true</div>
+          <div class="column comment">Left click: event.button === 0 --> returns true</div>
+          <div class="column comment"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-module-reporter">
+        <div class="wrapper title-comment">
+          <div class="column title">event.srcElement</div>
+          <div class="column comment">event.target</div>
+          <div class="column comment"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-module-reporter">
+        <div class="wrapper title-comment">
+          <div class="column title">filter: alpha(opacity=50)</div>
+          <div class="column comment">opacity: 0.5</div>
+          <div class="column comment"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-module-reporter">
+        <div class="wrapper title-comment">
+          <div class="column title">node instanceof Object --> returns false</div>
+          <div class="column comment">node instanceof Object --> returns true</div>
+          <div class="column comment">Instead use node.constructor.name === "Element" when checking if the node is an element.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
