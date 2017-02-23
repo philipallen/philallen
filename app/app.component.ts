@@ -9,7 +9,5 @@ export class AppComponent {
     name: string = "Phil Allen";
 
     constructor() {}
-    //overall skills
-    //contact page with phone icon
-    //big menu buttons with icons
+    
 }
