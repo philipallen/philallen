@@ -53,16 +53,22 @@ h5 {
 }
 
 p {
+  line-height: 1.4em;
   font-size: 15px;
 }
 
 a {
-    color: #bbb;
-    text-decoration: none;
+  color: #bbb;
+  text-decoration: none;
 }
 
 a:hover {
-    color: #222;
+  color: #222;
+}
+
+li {
+  line-height: 1.4em;
+  margin-bottom: 10px;
 }
 
 /*Not sure if this is good - prettify doesn't seem to work properly */

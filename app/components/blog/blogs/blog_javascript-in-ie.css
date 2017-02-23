@@ -19,6 +19,7 @@
 }
 
 .column {
+  padding: 10px 0;
   flex-grow: 0;
   -webkit-flex-grow: 0;
   flex-shrink: 0;
@@ -84,6 +85,10 @@
   }
 }
 @media all and (max-width: 700px) {
+  .column {
+    padding: 5px 0;
+  }
+  
   .title-comment-row {
     flex-direction: column;
     -webkit-flex-direction: column;
@@ -129,4 +134,8 @@
   /*background-color: #FFEEDB;*/
   padding-top: 6px;
   padding-bottom: 6px;
+}
+
+.table-row.header .column {
+  font-weight: bold;
 }
