@@ -3,10 +3,10 @@
 	background-color: #f8f8f8;
 }
 
+/*three circles*/
 .outer {
 	max-width: 800px;
 	font-size: 0;
-    /*background: linear-gradient(#195797,#165391);*/
 }
 
 .square {
@@ -25,7 +25,6 @@
 	width: 100%;
 	border-radius: 50%;
 	border: 1px solid #CC6666;
-	/*background: #009aff;*/
 }
 
 .circle:after {
@@ -54,4 +53,28 @@
 	color: #CC6666;
 	font-weight: 700;
 	font-size: 4vw;
+}
+
+
+/*recursive css*/
+.viewport {
+    position: relative;
+    height: 15em;
+    overflow: hidden;
+}
+
+.viewport div div {
+    opacity: 0.8;
+}
+
+.staircase div {
+    position: relative;
+    top: 3em;
+    background-color: #CC6666;
+    width: 50%;
+    height: 2em;	
+}
+
+.staircase > div:first-of-type {
+	top: 0em;
 }

@@ -67,11 +67,11 @@
     <div class="wrapper attributes">
       <div class="wrapper title-comment-notes-row">
         <div class="wrapper title-comment-row">
-          <div class="column title">elem.currentStyle</div>
-          <div class="column comment">elem.style</div>
+          <div class="column title">elem.currentStyle.visibility</div>
+          <div class="column comment">window.getComputedStyle(elem, null).getPropertyValue("visibility")</div>
         </div>
         <div class="wrapper notes-row">
-          <div class="column notes"></div>
+          <div class="column notes">This is an example of using currentStyle with the 'visibility' attribute. Obviously this can be any style attribute.</div>
         </div>
       </div>
     </div>
@@ -179,6 +179,20 @@
     <div class="wrapper attributes">
       <div class="wrapper title-comment-notes-row">
         <div class="wrapper title-comment-row">
+          <div class="column title">elem.filters</div>
+          <div class="column comment">elem.style.filter</div>
+        </div>
+        <div class="wrapper notes-row">
+          <div class="column notes">.filters returns a collection of filters on an element. You can set filters in the css and get them using .style.filter.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-notes-row">
+        <div class="wrapper title-comment-row">
           <div class="column title">table.cells[y]</div>
           <div class="column comment">table.rows[x].cells[y]</div>
         </div>
@@ -225,7 +239,7 @@
           <div class="column comment">event.target</div>
         </div>
         <div class="wrapper notes-row">
-          <div class="column notes"></div>
+          <div class="column notes">This may be more of a problem in Firefox (Gecko), but issues have been found in Webkit, too.</div>
         </div>
       </div>
     </div>
