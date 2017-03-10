@@ -89,7 +89,7 @@ scope: {
 <p>Link: where to put any directive logic, such as data binding and event listeners.</p>
 <p>Controller: can be used as an API to communicate across directives. Publishes a controller on you app.</p>
 
-<h5>Scope digest</h5>
+<h5>Scope $digest</h5>
 <p>Angular's $digest cycle occurs when several built-in services/directives change, such as ng-click, $timeout, ng-model..etc).</p>
 <p>The $digest cycle fires all watches. It starts at the $rootScope and visits all the child scopes, calling the watches along the way.</p>
 <p>In two way data binding, if a fired watcher changes the scope data model and corresponding listener function is called which updates the other side of the two way binding.</p>
