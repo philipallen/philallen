@@ -15,7 +15,7 @@ export const routes: Route[] = [
     { path: 'work', component: WorkComponent,
     { path: 'blog', component: BlogComponent,
 	    children: [
-	      { path: '', redirectTo: 'angular-memory-leaks', pathMatch: 'full' },
+	      { path: '', redirectTo: 'frontend-essentials', pathMatch: 'full' },
 	      { path: 'angular-memory-leaks', component: Blog_AnglarMemory },
 	      { path: 'frontend-essentials', component: Blog_FrontendEssentials },
 	      { path: 'javascript-in-ie', component: Blog_JavascriptInIE },
