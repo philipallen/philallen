@@ -9,9 +9,10 @@ import { PlaygroundComponent } from "./components/playground/playground.componen
 import { routing } from "./routes";
 import { HomeComponent } from "./components/home/home.component";
 import { RankingComponent } from "./components/ranking/ranking.component";
-import { Blog_AnglarMemory } from './components/blog/blogs/blog_angular-memory';
-import { Blog_FrontendEssentials } from './components/blog/blogs/blog_frontend-essentials';
+import { Blog_AnglarMemory } from './components/blog/blogs/blog_angular-memory.component';
+import { Blog_FrontendEssentials } from './components/blog/blogs/blog_frontend-essentials.component';
 import { Blog_JavascriptInIE } from './components/blog/blogs/blog_javascript-in-ie.component';
+import { Blog_AngularDirectiveScope } from './components/blog/blogs/blog_angular-directive-scope.component';
 
 @NgModule({
     imports: [
@@ -29,7 +30,8 @@ import { Blog_JavascriptInIE } from './components/blog/blogs/blog_javascript-in-
         RankingComponent,
         Blog_AnglarMemory,
         Blog_FrontendEssentials,
-        Blog_JavascriptInIE
+        Blog_JavascriptInIE,
+        Blog_AngularDirectiveScope
     ],
     bootstrap: [ AppComponent ]
 })

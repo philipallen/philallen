@@ -1,0 +1,97 @@
+<h2>Angular Directive Scope</h2>
+
+<h5>Isolate directive scope</h5>
+<p>You can isolate the scope of a directive from its parent by using the scope object.</p>
+<p>When you isolate the directive scope, the directive cannot access the scope of the parent controller.</p>
+  <pre class="prettyprint"><![CDATA[
+.directive('myDirective', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      info: '=info'
+    },
+    templateUrl: 'my-directive-template.html'
+  };
+}); ]]>
+  </pre>
+
+<h4>Directive options</h4>
+
+<h5>Scope binding options</h5>
+<p>"=": Two way data binding. This enables you to update the parent's scope from your directive.</p>
+<p>Two way data binding uses 'watches' under the hood.</p>
+  <pre class="prettyprint"><![CDATA[
+scope: {
+  twoWayData: '=twoWayData'
+}
+]]>
+  </pre>
+
+<p>"&": Passing methods into your directive's scope so that they can be called within your directive scope, as callbacks.</p>
+  <pre class="prettyprint"><![CDATA[
+scope: {
+  someMethod: '&someMethod'
+}
+]]>
+  </pre>
+
+<p>"@": Used to pass strings into your directive. If this is set on the attribute inside curly brackets then it will be the interpolated value. The easy way to remember this is it is <i>At</i>tribute string binding.</p>
+  <pre class="prettyprint"><![CDATA[
+scope: {
+  someString: '@someString'
+}
+]]>
+  </pre>
+
+<p>"<": Used as one-way data binding. This can be used when there is no need for the directive to update the value. This means Angular won't look out for any changes to this value, which can be better for performance.</p>
+  <pre class="prettyprint"><![CDATA[
+scope: {
+  oneWayData: '<oneWayData'
+}
+]]>
+  </pre>
+
+<h5>Replace</h5>
+<p>A boolean. You can replace the element that the directive was declared on if this is set to true.</p>
+<p>If you don't replace:</p>
+  <pre class="prettyprint"><![CDATA[
+<div my-directive><span>directive-template</span></div>
+]]>
+  </pre>
+<p>If you do replace:</p>
+  <pre class="prettyprint"><![CDATA[
+<span>directive-template</span>
+]]>
+  </pre>
+
+<h5>Require</h5>
+<p>Specify controllers that are required by the directive. There are various prefixes you can use, such as ? (optional), ^ (mandatory) and a combination of the two. This is generally used when directives need to communicate in some form.</p>
+  <pre class="prettyprint"><![CDATA[
+.directive('myDirective', function() {
+  return {
+    restrict: 'E',
+    require: 'myController',
+    templateUrl: 'my-directive-template.html'
+  };
+});]]>
+  </pre>
+
+<h5>Transclude</h5>
+<p>A boolean. This means the contents of a directive use the scope of the parent directive and do not use the scope of the inside. It flips the scope reference. If you try to change data on the scope from within the controller of the directive, the directive will not care.</p>
+
+<h5>Restrict</h5>
+<p>Specify which 'type' the directive can be used. Element (E), Attribute (A), Class Name (C) and Comments (M)</p>
+
+<h4>Other directive scope considerations</h4>
+
+<h5>Compile vs Link vs Controller</h5>
+<p>Compile: compiles the template and returns the linking function.</p>
+<p>Link: where to put any directive logic, such as data binding and event listeners.</p>
+<p>Controller: can be used as an API to communicate across directives. Publishes a controller on you app.</p>
+
+<h5>Scope digest</h5>
+<p>Angular's $digest cycle occurs when several built-in services/directives change, such as ng-click, $timeout, ng-model..etc).</p>
+<p>The $digest cycle fires all watches. It starts at the $rootScope and visits all the child scopes, calling the watches along the way.</p>
+<p>In two way data binding, if a fired watcher changes the scope data model and corresponding listener function is called which updates the other side of the two way binding.</p>
+<p>The $digest cycle is actually called a minimum of twice. It can run many times in succession if there are changes on the scope. It will only stop once it is satisfied all the scopes are stable and there are no further changes.</p>
+<p>$digest() is actually called from $apply(). $apply will be called, when the built-in angular services/directives change. You can call $apply manually if you add something that doesn't trigger a $digest cycle.</p>
