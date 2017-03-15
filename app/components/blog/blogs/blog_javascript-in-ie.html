@@ -25,8 +25,8 @@
     <div class="wrapper attributes">
       <div class="wrapper title-comment-notes-row">
         <div class="wrapper title-comment-row">
-          <div class="column title">elem.attachEvent()</div>
-          <div class="column comment">elem.addEventListener()</div>
+          <div class="column title">EventTarget.attachEvent()</div>
+          <div class="column comment">EventTarget.addEventListener()</div>
         </div>
         <div class="wrapper notes-row">
           <div class="column notes"></div>
@@ -39,8 +39,8 @@
     <div class="wrapper attributes">
       <div class="wrapper title-comment-notes-row">
         <div class="wrapper title-comment-row">
-          <div class="column title">elem.all.tags("input");</div>
-          <div class="column comment">elem.getElementsByTagName('input');</div>
+          <div class="column title">document.all.tags("input");</div>
+          <div class="column comment">document.getElementsByTagName('input');</div>
         </div>
         <div class="wrapper notes-row">
           <div class="column notes">Returns an array</div>
@@ -53,8 +53,8 @@
     <div class="wrapper attributes">
       <div class="wrapper title-comment-notes-row">
         <div class="wrapper title-comment-row">
-          <div class="column title">elem.runtimeStyle</div>
-          <div class="column comment">elem.style</div>
+          <div class="column title">Element.runtimeStyle</div>
+          <div class="column comment">Element.style</div>
         </div>
         <div class="wrapper notes-row">
           <div class="column notes"></div>
@@ -67,8 +67,8 @@
     <div class="wrapper attributes">
       <div class="wrapper title-comment-notes-row">
         <div class="wrapper title-comment-row">
-          <div class="column title">elem.currentStyle.visibility</div>
-          <div class="column comment">window.getComputedStyle(elem, null).getPropertyValue("visibility")</div>
+          <div class="column title">Element.currentStyle.visibility</div>
+          <div class="column comment">window.getComputedStyle(Element, null).getPropertyValue("visibility")</div>
         </div>
         <div class="wrapper notes-row">
           <div class="column notes">This is an example of using currentStyle with the 'visibility' attribute. Obviously this can be any style attribute.</div>
@@ -81,8 +81,8 @@
     <div class="wrapper attributes">
       <div class="wrapper title-comment-notes-row">
         <div class="wrapper title-comment-row">
-          <div class="column title">elem.pixelHeight</div>
-          <div class="column comment">elem.height</div>
+          <div class="column title">Element.pixelHeight</div>
+          <div class="column comment">Element.height</div>
         </div>
         <div class="wrapper notes-row">
           <div class="column notes">Similar idea for 'width', 'top', 'bottom', 'left', 'right'</div>
@@ -95,8 +95,8 @@
     <div class="wrapper attributes">
       <div class="wrapper title-comment-notes-row">
         <div class="wrapper title-comment-row">
-          <div class="column title">elem.document.body</div>
-          <div class="column comment">elem.ownerDocument.body</div>
+          <div class="column title">Element.document.body</div>
+          <div class="column comment">Element.ownerDocument.body</div>
         </div>
         <div class="wrapper notes-row">
           <div class="column notes"></div>
@@ -109,8 +109,8 @@
     <div class="wrapper attributes">
       <div class="wrapper title-comment-notes-row">
         <div class="wrapper title-comment-row">
-          <div class="column title">elem.selectSingleNode("name")</div>
-          <div class="column comment">elem.getElementsByTagName("name")[0]</div>
+          <div class="column title">node.selectSingleNode("name")</div>
+          <div class="column comment">node.getElementsByTagName("name")[0]</div>
         </div>
         <div class="wrapper notes-row">
           <div class="column notes">Returns a single element.</div>
@@ -123,8 +123,8 @@
     <div class="wrapper attributes">
       <div class="wrapper title-comment-notes-row">
         <div class="wrapper title-comment-row">
-          <div class="column title">elem.selectNodes("name")</div>
-          <div class="column comment">elem.getElementsByTagName("name")</div>
+          <div class="column title">node.selectNodes("name")</div>
+          <div class="column comment">node.getElementsByTagName("name")</div>
         </div>
         <div class="wrapper notes-row">
           <div class="column notes">Returns an array.</div>
@@ -137,8 +137,8 @@
     <div class="wrapper attributes">
       <div class="wrapper title-comment-notes-row">
         <div class="wrapper title-comment-row">
-          <div class="column title">elem.selectNodes("*")</div>
-          <div class="column comment">elem.children</div>
+          <div class="column title">node.selectNodes("*")</div>
+          <div class="column comment">node.children</div>
         </div>
         <div class="wrapper notes-row">
           <div class="column notes">Returns an array.</div>
@@ -151,8 +151,8 @@
     <div class="wrapper attributes">
       <div class="wrapper title-comment-notes-row">
         <div class="wrapper title-comment-row">
-          <div class="column title">elem.text</div>
-          <div class="column comment">elem.textContent</div>
+          <div class="column title">node.text</div>
+          <div class="column comment">node.textContent</div>
         </div>
         <div class="wrapper notes-row">
           <div class="column notes"></div>
@@ -165,8 +165,8 @@
     <div class="wrapper attributes">
       <div class="wrapper title-comment-notes-row">
         <div class="wrapper title-comment-row">
-          <div class="column title">elem.cloneNode()</div>
-          <div class="column comment">jQuery's elem.clone(true, true)</div>
+          <div class="column title">node.cloneNode()</div>
+          <div class="column comment">jQuery's node.clone(true, true)</div>
         </div>
         <div class="wrapper notes-row">
           <div class="column notes">jQuery not the perfect solution, but it does a deep copy, including events. Would need to change events to jQuery too though.</div>
@@ -179,8 +179,8 @@
     <div class="wrapper attributes">
       <div class="wrapper title-comment-notes-row">
         <div class="wrapper title-comment-row">
-          <div class="column title">elem.filters</div>
-          <div class="column comment">elem.style.filter</div>
+          <div class="column title">Element.filters</div>
+          <div class="column comment">Element.style.filter</div>
         </div>
         <div class="wrapper notes-row">
           <div class="column notes">.filters returns a collection of filters on an element. You can set filters in the css and get them using .style.filter.</div>
@@ -197,7 +197,7 @@
           <div class="column comment">table.rows[x].cells[y]</div>
         </div>
         <div class="wrapper notes-row">
-          <div class="column notes">Not an exact replacement, as you need to know the row. A custom method would have to be written.</div>
+          <div class="column notes">Not an exact replacement, as you need to know the row. A custom method would have to be written to determine the row (if multiple rows exist).</div>
         </div>
       </div>
     </div>
@@ -221,8 +221,8 @@
     <div class="wrapper attributes">
       <div class="wrapper title-comment-notes-row">
         <div class="wrapper title-comment-row">
-          <div class="column title">Left click: event.button === 1 -> returns true</div>
-          <div class="column comment">Left click: event.button === 0 -> returns true</div>
+          <div class="column title">Left click: Event.button === 1 -> returns true</div>
+          <div class="column comment">Left click: Event.button === 0 -> returns true</div>
         </div>
         <div class="wrapper notes-row">
           <div class="column notes"></div>
@@ -235,8 +235,8 @@
     <div class="wrapper attributes">
       <div class="wrapper title-comment-notes-row">
         <div class="wrapper title-comment-row">
-          <div class="column title">event.srcElement</div>
-          <div class="column comment">event.target</div>
+          <div class="column title">Event.srcElement</div>
+          <div class="column comment">Event.target</div>
         </div>
         <div class="wrapper notes-row">
           <div class="column notes">This may be more of a problem in Firefox (Gecko), but issues have been found in Webkit, too.</div>
