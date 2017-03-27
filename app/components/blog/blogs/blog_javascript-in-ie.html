@@ -123,6 +123,20 @@
     <div class="wrapper attributes">
       <div class="wrapper title-comment-notes-row">
         <div class="wrapper title-comment-row">
+          <div class="column title">documentFragment.selectSingleNode("*[row='1']")</div>
+          <div class="column comment">documentFragment.querySelector("*[row='1']")</div>
+        </div>
+        <div class="wrapper notes-row">
+          <div class="column notes">Returns a single element.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-notes-row">
+        <div class="wrapper title-comment-row">
           <div class="column title">node.selectNodes("name")</div>
           <div class="column comment">node.getElementsByTagName("name")</div>
         </div>
@@ -268,6 +282,48 @@
         </div>
         <div class="wrapper notes-row">
           <div class="column notes">Instead use node.constructor.name === "Element" when checking if the node is an element.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-notes-row">
+        <div class="wrapper title-comment-row">
+          <div class="column title">Event.cancelBubble</div>
+          <div class="column comment">Event.stopPropagation</div>
+        </div>
+        <div class="wrapper notes-row">
+          <div class="column notes">This may actually still work on some browsers, but it has been dropped from web standards.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-notes-row">
+        <div class="wrapper title-comment-row">
+          <div class="column title">Element.addEventListener("activate", func())</div>
+          <div class="column comment">Event.addEventListener("focus", func())</div>
+        </div>
+        <div class="wrapper notes-row">
+          <div class="column notes">Similarly, for deactivate, use blur.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="wrapper attributes">
+      <div class="wrapper title-comment-notes-row">
+        <div class="wrapper title-comment-row">
+          <div class="column title">Element.componentFromPoint(x, y)</div>
+          <div class="column comment">document.elementFromPoint(x, y)</div>
+        </div>
+        <div class="wrapper notes-row">
+          <div class="column notes"></div>
         </div>
       </div>
     </div>
