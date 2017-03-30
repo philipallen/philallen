@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'blog',
-    templateUrl: 'components/blog/blog.component.html',
-    styleUrls: ['components/blog/blog.component.css']
+    templateUrl: 'pages/blog/blog.html',
+    styleUrls: ['pages/blog/blog.css']
 })
-export class BlogComponent {
+export class BlogPage {
     constructor() {
     	public menu = false;
     	toggleMenu(): void {

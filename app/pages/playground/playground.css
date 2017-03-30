@@ -1,0 +1,80 @@
+.playground-content {
+	padding: 25px;
+	background-color: #f8f8f8;
+}
+
+/*three circles*/
+.outer {
+	max-width: 800px;
+	font-size: 0;
+}
+
+.square {
+	position: relative;
+  	width: 28%;
+  	padding: 7px;
+}
+
+.square:after {
+  	content: "";
+  	display: block;
+}
+
+.circle {
+	cursor: pointer;
+	width: 100%;
+	border-radius: 50%;
+	border: 1px solid #CC6666;
+}
+
+.circle:after {
+	content: "";
+  	display: block;
+  	padding-bottom: 100%;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.middle {
+  	margin: 0 auto;
+}
+
+.circle-text {
+	position: absolute;
+	left: 50%;
+    top: 50%;
+	transform: translate(-50%, -50%);
+	color: #CC6666;
+	font-weight: 700;
+	font-size: 4vw;
+}
+
+
+/*recursive css*/
+.viewport {
+    position: relative;
+    height: 15em;
+    overflow: hidden;
+}
+
+.viewport div div {
+    opacity: 0.8;
+}
+
+.staircase div {
+    position: relative;
+    top: 3em;
+    background-color: #CC6666;
+    width: 50%;
+    height: 2em;	
+}
+
+.staircase > div:first-of-type {
+	top: 0em;
+}

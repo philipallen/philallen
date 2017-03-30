@@ -2,13 +2,11 @@ import { Component } from '@angular/core';
 import { GithubRepoService } from '../../providers/github-repo-service';
 
 @Component({
-    selector: 'contact',
-    templateUrl: 'components/playground/playground.component.html',
-    styleUrls: ['components/playground/playground.component.css']
+    selector: 'github-repos',
+    templateUrl: 'components/github-repos/github-repos.component.html',
+    styleUrls: ['components/github-repos/github-repos.component.css']
 })
-export class PlaygroundComponent {
-    name: string = "Playground";
-    users: {};
+export class GithubReposComponent {
     repos: any;
 
     constructor(private githubRepoService: GithubRepoService) {

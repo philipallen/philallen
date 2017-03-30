@@ -4,8 +4,8 @@ import 'rxjs/add/operator/map';
 
 @Component({
     selector: 'work',
-    templateUrl: 'components/work/work.component.html',
-    styleUrls: ['components/work/work.component.css']
+    templateUrl: 'pages/work/work.html',
+    styleUrls: ['pages/work/work.css']
 })
-export class WorkComponent {
+export class WorkPage {
 }

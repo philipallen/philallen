@@ -1,19 +1,18 @@
 import { Route, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './components/home/home.component';
-import { WorkComponent } from './components/work/work.component';
-import { BlogComponent } from './components/blog/blog.component';
-import { PlaygroundComponent } from './components/playground/playground.component';
-import { Blog_AnglarMemory } from './components/blog/blogs/blog_angular-memory.component';
-import { Blog_FrontendEssentials } from './components/blog/blogs/blog_frontend-essentials.component';
-import { Blog_JavascriptInIE } from './components/blog/blogs/blog_javascript-in-ie.component';
-import { Blog_JavascriptInIE } from './components/blog/blogs/blog_javascript-in-ie.component';
-import { Blog_AngularDirectiveScope } from './components/blog/blogs/blog_angular-directive-scope.component';
+import { PlaygroundPage } from './pages/playground/playground';
+import { WorkPage } from './pages/work/work';
+import { HomePage } from './pages/home/home';
+import { BlogPage } from './pages/blog/blog';
+import { Blog_AnglarMemory } from './pages/blog/blogs/blog_angular-memory';
+import { Blog_FrontendEssentials } from './pages/blog/blogs/blog_frontend-essentials';
+import { Blog_JavascriptInIE } from './pages/blog/blogs/blog_javascript-in-ie';
+import { Blog_AngularDirectiveScope } from './pages/blog/blogs/blog_angular-directive-scope';
 
 export const routes: Route[] = [
-    { path: '', pathMatch: 'full', component: HomeComponent },
-    { path: 'work', component: WorkComponent,
-    { path: 'blog', component: BlogComponent,
+    { path: '', pathMatch: 'full', component: HomePage },
+    { path: 'work', component: WorkPage,
+    { path: 'blog', component: BlogPage,
 	    children: [
 	      { path: '', redirectTo: 'frontend-essentials', pathMatch: 'full' },
 	      { path: 'angular-memory-leaks', component: Blog_AnglarMemory },
@@ -22,7 +21,7 @@ export const routes: Route[] = [
 	      { path: 'angular-directive-scope', component: Blog_AngularDirectiveScope }
 	    ] 
 	},
-    { path: 'playground', component: PlaygroundComponent }
+    { path: 'playground', component: PlaygroundPage }
 ];
 
 export const routing = RouterModule.forRoot(routes, { useHash: true });

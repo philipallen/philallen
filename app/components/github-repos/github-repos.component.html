@@ -1,0 +1,7 @@
+<div *ngFor="let repo of repos;">
+  <div style="margin-top: 10px;" *ngIf="!repo.fork">
+    <div>{{repo.name}}</div>
+    <div>{{repo.description}}</div>
+    <a target="_blank" href="{{repo.html_url}}"><button>View on Github</button></a>
+  </div>
+</div>
