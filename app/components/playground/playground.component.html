@@ -1,5 +1,17 @@
+
 <div class="playground-content">
-  <h4>More content will appear here shortly.</h4>
+  <!--TODO This needs to move into its own github component that can be pulled into the playground page-->
+  <h4>Github repositories</h4>
+  <div *ngFor="let repo of repos;">
+    <div style="margin-top: 10px;" *ngIf="!repo.fork">
+      <div>{{repo.name}}</div>
+      <div>{{repo.description}}</div>
+      <a target="_blank" href="{{repo.html_url}}"><button>View on Github</button></a>
+    </div>
+  </div>
+
+
+  <h4>CSS playground</h4>
 	<p>Responsive 3 circles in a row</p>
 	<div class="outer middle">
     <div class="square right">

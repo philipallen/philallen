@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GithubRepoService } from '../../providers/github-repo-service';
 
 @Component({
     selector: 'contact',
@@ -8,6 +9,12 @@ import { Component } from '@angular/core';
 export class PlaygroundComponent {
     name: string = "Playground";
     users: {};
+    repos: any;
 
-    constructor() {}
+    constructor(private githubRepoService: GithubRepoService) {
+		githubRepoService.getAll().subscribe(res => {
+      		console.log(res.json());
+      		this.repos = res.json();
+	    });
+    }
 }

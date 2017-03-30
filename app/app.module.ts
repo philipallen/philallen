@@ -14,6 +14,8 @@ import { Blog_FrontendEssentials } from './components/blog/blogs/blog_frontend-e
 import { Blog_JavascriptInIE } from './components/blog/blogs/blog_javascript-in-ie.component';
 import { Blog_AngularDirectiveScope } from './components/blog/blogs/blog_angular-directive-scope.component';
 
+import { GithubRepoService } from './providers/github-repo-service';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -33,6 +35,7 @@ import { Blog_AngularDirectiveScope } from './components/blog/blogs/blog_angular
         Blog_JavascriptInIE,
         Blog_AngularDirectiveScope
     ],
-    bootstrap: [ AppComponent ]
+    bootstrap: [ AppComponent ],
+    providers: [GithubRepoService]
 })
 export class AppModule { }
