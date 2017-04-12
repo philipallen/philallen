@@ -78,3 +78,82 @@
 .staircase > div:first-of-type {
 	top: 0em;
 }
+
+
+/*Diamonds*/
+
+.dashboard-diamond {
+	position: relative;
+	margin: 15vw auto;
+	width: 60vw;
+	height: 60vw;
+	max-width: 300px;
+	max-height: 300px;
+	transform: rotate(45deg);
+	display: flex;
+	flex-flow: row wrap;
+
+	@media (min-width: 769px) {
+	  margin: 10vw auto;
+	}
+}
+.diamond {
+	position: relative;
+	width: 50%;
+	border: 2px solid #CC6666;
+	display: flex;
+	justify-content: center;
+	box-sizing: border-box;
+}
+
+.diamond:after {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}
+
+.diamond.one {
+	border-right:  0;
+	border-bottom:  0;
+	border-left:  .3em solid #CC6666;
+	border-top:  .3em solid #CC6666;
+}
+
+.diamond.two {
+	border-bottom:  0;
+	border-top:  .3em solid #CC6666;
+	border-right:  .3em solid #CC6666;
+}
+
+.diamond.three {
+	border-right:  0;
+	border-left:  .3em solid #CC6666;
+	border-bottom:   .3em solid #CC6666;
+}
+
+.diamond.four {
+	border-right:  .3em solid #CC6666;
+	border-bottom:  .3em solid #CC6666;
+}
+
+.diamond-text {
+	color: #CC6666;
+	font-weight: 700;
+	font-size: 4vw;
+	text-transform: uppercase;
+	font-size: 3.5vw;
+	margin: 5px 0 0;
+
+
+	@media (min-width: 500px) {
+		font-size: 1.3em;
+	}
+}
+
+.straighten-content-container {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    transform: rotate(315deg);
+}
