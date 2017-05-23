@@ -1,4 +1,4 @@
-## Angular2 Express slim starter
+## My personal website
 ### Heroku ready wih SystemJS builder
 
 - Angular 2 ( https://angular.io/docs/ts/latest/quickstart.html )
@@ -38,7 +38,3 @@ npm run prod
 ```bash
 git push heroku master
 ```
-
-## If you are looking for Webpack version
-
-https://github.com/vladotesanovic/angular2-express-starter
