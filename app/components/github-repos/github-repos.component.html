@@ -1,7 +1,10 @@
-<div *ngFor="let repo of repos;">
-  <div style="margin-top: 10px;" *ngIf="!repo.fork">
-    <div>{{repo.name}}</div>
-    <div>{{repo.description}}</div>
-    <a target="_blank" href="{{repo.html_url}}"><button>View on Github</button></a>
+<div class="repos-container">
+  <div *ngIf="!repos" class="loader">Loading...</div>
+  <div class="repo" *ngFor="let repo of repos;">
+    <div *ngIf="!repo.fork">
+      <h3 class="dark-text pull-right">{{repo.name}}</h3>
+      <p class="repo-description">{{repo.description}}</p>
+      <button (click)="openUrl(repo.html_url)">View on Github</button>
+    </div>
   </div>
-</div>
+</div>  

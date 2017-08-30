@@ -11,8 +11,16 @@ export class GithubReposComponent {
 
     constructor(private githubRepoService: GithubRepoService) {
 		githubRepoService.getAll().subscribe(res => {
-      		console.log(res.json());
       		this.repos = res.json();
-	    });
+        });
+        //when offline:
+        // this.repos = [
+        //     { name: 'test', description: 'some description', html_url: 'http://google.co.uk' },
+        //     { name: 'another', description: 'some other description', html_url: 'http"//bbc.com' }
+        // ]
+    }
+
+    openUrl(route: string): void {
+        window.open(route);
     }
 }

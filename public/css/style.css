@@ -35,6 +35,11 @@ h2 {
   font-style: normal;
 }
 
+h3 {
+  margin: 0;
+	font-size: 18px;
+}
+
 h4 {
   color: #222;
   font-size: 22px;
@@ -69,6 +74,15 @@ a:hover {
 li {
   line-height: 1.4em;
   margin-bottom: 10px;
+}
+
+button {
+	border: 0;
+    background: #f8f8f8;
+	padding: 10px;
+	cursor: pointer;
+	margin: 0 auto;
+    display: block;
 }
 
 /*Not sure if this is good - prettify doesn't seem to work properly */
